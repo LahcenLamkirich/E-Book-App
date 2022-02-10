@@ -87,15 +87,15 @@ class _LoginPageState extends State<LoginPage> {
                       style: TextStyle(fontSize: 16)),
                 ),
               ),
-              SizedBox(height: 19,),
+              SizedBox(height: 25,),
               Text('Not Registered Yet ? ', style: TextStyle(
-                fontSize: 16,
+                fontSize: 17,
               ),),
-              SizedBox(height: 9,),
+              SizedBox(height: 12,),
               Text("Create An Account ", 
               style: TextStyle(
                   color: Color.fromRGBO(76, 115, 253, 1),
-                  fontSize: 15,
+                  fontSize: 16,
               ),
               )
             ],
