@@ -25,6 +25,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
+              SizedBox(height: 40,),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 width: MediaQuery.of(context).size.width,
@@ -38,17 +39,65 @@ class _LoginPageState extends State<LoginPage> {
                       hintStyle: TextStyle(color: Colors.grey),
                       labelText: "Username",
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(50),
                         borderSide: BorderSide(color: Colors.red),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(40),
+                        borderRadius: BorderRadius.circular(50),
                         borderSide: BorderSide(color: Colors.grey)
                       )
                     ),
                   ),
                 ),
               ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                width: MediaQuery.of(context).size.width,
+                child: Form(
+                  child: TextFormField(
+                    maxLength: 25,
+                    decoration: InputDecoration(
+                      hintText: "Passowrd",
+                      labelText: "Password",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50),
+                        borderSide: BorderSide(color: Colors.grey),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(50),
+                        borderSide: BorderSide(color: Colors.grey),
+                      )
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 8,),
+              Container(
+                alignment: Alignment.bottomLeft,
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40),
+                 ),
+                  onPressed: () {},
+                  padding: EdgeInsets.symmetric(vertical: 18, horizontal: 35, ),
+                  color: Color.fromRGBO(76, 115, 253,1),
+                  textColor: Colors.white,
+                  child: Text("Sign In",
+                      style: TextStyle(fontSize: 16)),
+                ),
+              ),
+              SizedBox(height: 19,),
+              Text('Not Registered Yet ? ', style: TextStyle(
+                fontSize: 16,
+              ),),
+              SizedBox(height: 9,),
+              Text("Create An Account ", 
+              style: TextStyle(
+                  color: Color.fromRGBO(76, 115, 253, 1),
+                  fontSize: 15,
+              ),
+              )
             ],
           ),
         ),
