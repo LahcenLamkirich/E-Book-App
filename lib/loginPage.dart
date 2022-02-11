@@ -15,17 +15,17 @@ class _LoginPageState extends State<LoginPage> {
       body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 180),
+              SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset('assets/images/login.png',
-                      height: 210,
-                      width: 250
+                      height: 230,
+                      width: 260
                   ),
                 ],
               ),
-              SizedBox(height: 70,),
+              SizedBox(height: 60,),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 width: MediaQuery.of(context).size.width,
@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: TextFormField(
                     maxLength: 25,
                     decoration: InputDecoration(
-                        hintText: "Username",
+                      hintText: "Username",
                       hintStyle: TextStyle(color: Colors.grey),
                       labelText: "Username",
                       border: OutlineInputBorder(
@@ -54,7 +54,6 @@ class _LoginPageState extends State<LoginPage> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 width: MediaQuery.of(context).size.width,
                 child: Form(
-
                   child: TextFormField(
                     obscureText: true,
                     maxLength: 25,
@@ -73,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 8,),
+              SizedBox(height: 15,),
               Container(
                 alignment: Alignment.bottomLeft,
                 padding: EdgeInsets.symmetric(horizontal: 20),
@@ -99,7 +98,8 @@ class _LoginPageState extends State<LoginPage> {
                   color: Color.fromRGBO(76, 115, 253, 1),
                   fontSize: 16,
               ),
-              )
+              ),
+
             ],
           ),
         ),
