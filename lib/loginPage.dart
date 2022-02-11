@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
       body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 40),
+              SizedBox(height: 180),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
-              SizedBox(height: 40,),
+              SizedBox(height: 70,),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 width: MediaQuery.of(context).size.width,
@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: TextFormField(
                     maxLength: 25,
                     decoration: InputDecoration(
-                      hintText: "Username",
+                        hintText: "Username",
                       hintStyle: TextStyle(color: Colors.grey),
                       labelText: "Username",
                       border: OutlineInputBorder(
@@ -54,7 +54,9 @@ class _LoginPageState extends State<LoginPage> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 width: MediaQuery.of(context).size.width,
                 child: Form(
+
                   child: TextFormField(
+                    obscureText: true,
                     maxLength: 25,
                     decoration: InputDecoration(
                       hintText: "Passowrd",
@@ -87,12 +89,12 @@ class _LoginPageState extends State<LoginPage> {
                       style: TextStyle(fontSize: 16)),
                 ),
               ),
-              SizedBox(height: 25,),
+              SizedBox(height: 50,),
               Text('Not Registered Yet ? ', style: TextStyle(
                 fontSize: 17,
               ),),
               SizedBox(height: 12,),
-              Text("Create An Account ", 
+              Text("Create An Account ",
               style: TextStyle(
                   color: Color.fromRGBO(76, 115, 253, 1),
                   fontSize: 16,
