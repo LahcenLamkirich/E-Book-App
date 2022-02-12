@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                 alignment: Alignment.center,
                 child: Form(
                   child: TextFormField(
-                    maxLength: 25,
+                    maxLength: 50,
                     decoration: InputDecoration(
                       hintText: "Username",
                       hintStyle: TextStyle(color: Colors.grey),
@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Form(
                   child: TextFormField(
                     obscureText: true,
-                    maxLength: 25,
+                    maxLength: 50,
                     decoration: InputDecoration(
                       hintText: "Passowrd",
                       labelText: "Password",
@@ -67,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(50),
-                        borderSide: BorderSide(color: Colors.grey),
+                        borderSide: BorderSide(color: Colors.blue),
                       )
                     ),
                   ),

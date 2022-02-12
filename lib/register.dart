@@ -10,18 +10,33 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Text("This is the register page !", style: TextStyle(fontSize: 22),),
-            RaisedButton(
-              onPressed: (){
-                Navigator.pop(context);
-              },
-              color: Colors.red,
-              child: Text("Go Back ", style: TextStyle(color: Colors.white),),
+            SizedBox(height: 10,),
+            Image.asset('assets/images/login.png', width: 200, height: 260,),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              alignment: Alignment.center,
+              child: Form(
+                child: TextFormField(
+                  maxLength: 50,
+                  decoration: InputDecoration(
+                    hintText: "Username",
+                    labelText: "Username",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(40),
+                      borderSide: BorderSide(color: Colors.grey)
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius:BorderRadius.circular(40),
+                      borderSide: BorderSide(color: Colors.blue),
+                    )
+                  ),
+                ),
+              ),
             )
           ],
         ),
