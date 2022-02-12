@@ -93,13 +93,17 @@ class _LoginPageState extends State<LoginPage> {
                 fontSize: 17,
               ),),
               SizedBox(height: 12,),
-              Text("Create An Account ",
-              style: TextStyle(
-                  color: Color.fromRGBO(76, 115, 253, 1),
-                  fontSize: 16,
+              GestureDetector(
+                  onTap: () {
+                    print("The link button was clicked !");
+                  },
+                  child: Text("Create An Account ",
+                  style: TextStyle(
+                      color: Color.fromRGBO(76, 115, 253, 1),
+                      fontSize: 16,
+                  ),
+                  ),
               ),
-              ),
-
             ],
           ),
         ),
