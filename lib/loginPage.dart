@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapp/register.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -95,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 12,),
               GestureDetector(
                   onTap: () {
-                    print("The link button was clicked !");
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Register()));
                   },
                   child: Text("Create An Account ",
                   style: TextStyle(

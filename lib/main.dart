@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontSize: 20
               ),
             ),
-            Text('${count}',
+            Text('$count',
             style: TextStyle(fontSize: 30),),
             SizedBox(height: 230,),
             Row(
