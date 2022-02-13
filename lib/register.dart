@@ -145,7 +145,7 @@ class _RegisterState extends State<Register> {
   }
 }
 
-// la declaration des classes 
+// la declaration des classes
 class OpenPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {

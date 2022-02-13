@@ -93,12 +93,12 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   Container(
                     child: CustomPaint(
-                      painter: OpenPainter(),
+                      painter: OpenPainter12(),
                     ),
                   ),
                   Container(
                     child: CustomPaint(
-                      painter: OpenPainter1(),
+                      painter: OpenPainter123(),
                     ),
                   ),
                 ],
@@ -124,4 +124,31 @@ class _LoginPageState extends State<LoginPage> {
         ),
       );
   }
+}
+
+class OpenPainter12 extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    var paint1 = Paint()
+      ..color = Color(0xffC0C0C0)
+      ..style = PaintingStyle.fill;
+    //a rectangle
+    canvas.drawRect(Offset(60, 0) & Size(100, 5), paint1);
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) => true;
+}
+class OpenPainter123 extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    var paint1 = Paint()
+      ..color = Color.fromRGBO(76, 115, 253,1)
+      ..style = PaintingStyle.fill;
+    //a rectangle
+    canvas.drawRect(Offset(40, 0) & Size(60, 5), paint1);
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) => true;
 }
