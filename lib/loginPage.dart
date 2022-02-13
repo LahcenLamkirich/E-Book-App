@@ -74,20 +74,34 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               SizedBox(height: 15,),
-              Container(
-                alignment: Alignment.bottomLeft,
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: RaisedButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
-                 ),
-                  onPressed: () {},
-                  padding: EdgeInsets.symmetric(vertical: 18, horizontal: 35, ),
-                  color: Color.fromRGBO(76, 115, 253,1),
-                  textColor: Colors.white,
-                  child: Text("Sign In",
-                      style: TextStyle(fontSize: 16)),
-                ),
+              Row(
+                children: <Widget>[
+                  Container(
+                    alignment: Alignment.bottomLeft,
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40),
+                     ),
+                      onPressed: () {},
+                      padding: EdgeInsets.symmetric(vertical: 18, horizontal: 35, ),
+                      color: Color.fromRGBO(76, 115, 253,1),
+                      textColor: Colors.white,
+                      child: Text("Sign In",
+                          style: TextStyle(fontSize: 16)),
+                    ),
+                  ),
+                  Container(
+                    child: CustomPaint(
+                      painter: OpenPainter(),
+                    ),
+                  ),
+                  Container(
+                    child: CustomPaint(
+                      painter: OpenPainter1(),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: 50,),
               Text('Not Registered Yet ? ', style: TextStyle(
