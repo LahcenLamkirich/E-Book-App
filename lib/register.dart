@@ -18,8 +18,12 @@ class _RegisterState extends State<Register> {
           child: Column(
 //          mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 0,),
-              Image.asset('assets/images/login.png', width: 200, height: 260,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset('assets/images/login.png', width: 200, height: 260,),
+                ],
+              ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 alignment: Alignment.center,
@@ -136,7 +140,19 @@ class _RegisterState extends State<Register> {
                   ),
                 ],
               ),
-
+              SizedBox(height: 30),
+              GestureDetector(
+                onTap: () {
+                   Navigator.pop(context) ;
+                },
+                child: Text("You Already Have An Account",
+                  style: TextStyle(
+                    fontSize: 16,
+                    decoration: TextDecoration.underline,
+                    color: Color.fromRGBO(76, 115, 253,1),
+                    fontWeight: FontWeight.bold
+                ),),
+              ),
             ],
           ),
         ),
