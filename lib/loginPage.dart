@@ -28,13 +28,12 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 60,),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 14),
                 width: MediaQuery.of(context).size.width,
 //                height: MediaQuery.of(context).size.height,
                 alignment: Alignment.center,
                 child: Form(
                   child: TextFormField(
-                    maxLength: 50,
                     decoration: InputDecoration(
                       hintText: "Username",
                       hintStyle: TextStyle(color: Colors.grey),
@@ -52,12 +51,11 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 14),
                 width: MediaQuery.of(context).size.width,
                 child: Form(
                   child: TextFormField(
                     obscureText: true,
-                    maxLength: 50,
                     decoration: InputDecoration(
                       hintText: "Passowrd",
                       labelText: "Password",
@@ -87,8 +85,13 @@ class _LoginPageState extends State<LoginPage> {
                       padding: EdgeInsets.symmetric(vertical: 18, horizontal: 35, ),
                       color: Color.fromRGBO(76, 115, 253,1),
                       textColor: Colors.white,
-                      child: Text("Sign In",
-                          style: TextStyle(fontSize: 16)),
+                      child: RaisedButton(
+                      onPressed: (){
+                        print("The button is pressed !");
+                      },
+                        child: Text("Sign In",
+                            style: TextStyle(fontSize: 16)),
+                      ),
                     ),
                   ),
                   Container(
