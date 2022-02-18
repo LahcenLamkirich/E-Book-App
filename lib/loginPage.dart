@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapp/HomePage.dart';
 import 'package:flutterapp/register.dart';
 
 class LoginPage extends StatefulWidget {
@@ -28,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 60,),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 14),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 width: MediaQuery.of(context).size.width,
 //                height: MediaQuery.of(context).size.height,
                 alignment: Alignment.center,
@@ -50,6 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
+              SizedBox(height: 10,),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 14),
                 width: MediaQuery.of(context).size.width,
@@ -85,10 +87,10 @@ class _LoginPageState extends State<LoginPage> {
                       padding: EdgeInsets.symmetric(vertical: 18, horizontal: 35, ),
                       color: Color.fromRGBO(76, 115, 253,1),
                       textColor: Colors.white,
-                      child: RaisedButton(
-                      onPressed: (){
-                        print("The button is pressed !");
-                      },
+                      child: GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                        },
                         child: Text("Sign In",
                             style: TextStyle(fontSize: 16)),
                       ),
