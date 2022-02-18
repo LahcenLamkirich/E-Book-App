@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutterapp/pages/BookHome.dart';
+import './pages/BookHome.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -10,24 +11,21 @@ class _HomePageState extends State<HomePage> {
   int Selected_item = 0 ;
   static const TextStyle optionStyle = TextStyle(fontSize: 16, color: Colors.red, fontWeight: FontWeight.bold);
   // la declaration des widgets :
-  static const List<Widget> _widget_options = <Widget>[
-        Text('This is the first Text',style: optionStyle,),
-        Text('This is the second Text', style: optionStyle,),
-        Text('This is the Third Text', style: optionStyle,),
+//  static const List<Widget> _widget_options = <Widget>[
+//        Text('This is the first Text', style: optionStyle,),
+//        Text('This is the second Text', style: optionStyle,),
+//        Text('This is the Third Text', style: optionStyle,),
+//  ];
+  final _pageOptions = [
+      BookHome(),
+
   ];
-
-  void _onTapItem(int index){
-    setState(() {
-      Selected_item = index ;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Center(
-          child: _widget_options.elementAt(Selected_item),
+          child: _pageOptions.elementAt(Selected_item),
         )
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -45,7 +43,11 @@ class _HomePageState extends State<HomePage> {
                 title: Text("Statistique")
             ),
         ],
-        onTap: _onTapItem,
+        onTap: (index) {
+            setState(() {
+                Selected_item = index ;
+            });
+        },
         currentIndex: Selected_item
 
       ),
