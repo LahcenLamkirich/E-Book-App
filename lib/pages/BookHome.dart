@@ -11,24 +11,20 @@ class _BookHomeState extends State<BookHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Row(
+      body: Row(
           children: <Widget>[
             Card(
-              margin: EdgeInsets.symmetric(horizontal: 10),
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 80),
               elevation: 10,
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  const ListTile(
-                      leading: Icon(Icons.add_circle_outline),
-                      title: Text("First Card"),
-                      subtitle: Text("The Substitles"),
-                  )
+                    Text("test")
+
                 ],
               ),
             )
           ],
-        ),
       )
     );
   }
