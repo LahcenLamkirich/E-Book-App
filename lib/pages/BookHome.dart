@@ -12,12 +12,22 @@ class _BookHomeState extends State<BookHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          'This is the home page',
-          style: TextStyle(
-            fontSize: 16,
-            color: Colors.red
-          ),
+        child: Row(
+          children: <Widget>[
+            Card(
+              margin: EdgeInsets.symmetric(horizontal: 10),
+              elevation: 10,
+              child: Column(
+                children: <Widget>[
+                  const ListTile(
+                      leading: Icon(Icons.add_circle_outline),
+                      title: Text("First Card"),
+                      subtitle: Text("The Substitles"),
+                  )
+                ],
+              ),
+            )
+          ],
         ),
       )
     );
