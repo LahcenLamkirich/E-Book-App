@@ -11,16 +11,15 @@ class _BookHomeState extends State<BookHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-       scrollDirection: Axis.vertical,
-       itemCount:3,
-       itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(items[index],
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
-            );
-          },
-       )
+      body: Center(
+        child: Text(
+          'This is the home page',
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.red
+          ),
+        ),
+      )
     );
   }
 }
