@@ -16,7 +16,8 @@ class _BookHomeState extends State<BookHome> {
        itemCount:3,
        itemBuilder: (context, index) {
           return ListTile(
-            title: Text(items[index], style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+            title: Text(items[index],
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
             );
           },
        )
