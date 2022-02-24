@@ -7,7 +7,6 @@ class BookHome extends StatefulWidget {
 
 class _BookHomeState extends State<BookHome> {
   static const items = ["1st","2nd","3rd"];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +26,7 @@ class _BookHomeState extends State<BookHome> {
                   left: 0,
                   child: Container(
                     height: 80,
-                    width: 300,
+                    width: 200,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
                         bottomRight: Radius.circular(50),
@@ -49,9 +48,36 @@ class _BookHomeState extends State<BookHome> {
                 )
               ],
             ),
+          ),
+          SizedBox(height: 20,),
+          Container(
+            height: 150,
+            width: 300,
+            decoration: BoxDecoration(
+              color: Colors.grey.withOpacity(0.2),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 20,),
+                Row(
+                    children: <Widget>[
+                      Text("Here the image"),
+                      SizedBox(width: 20,),
+                      Column(
+                        children: <Widget>[
+                          Text("Name of the book"),
+                          Text("Subtitle of the book")
+                        ],
+                      )
+                    ],
+                )
+
+              ],
+            ),
           )
         ],
-      )
+      ),
     );
   }
 }
