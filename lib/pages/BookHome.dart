@@ -11,13 +11,17 @@ class _BookHomeState extends State<BookHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ListTile(
-          trailing: Icon(Icons.add),
-          title: Text("lahcen"),
-          subtitle: Text("Lamkirich"),
-          leading: Icon(Icons.add_circle_outline),
-        ),
+      body: Column(
+        children: <Widget>[
+          Container(
+            height: 280,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(50)
+              ),
+              color: Colors.purple
+            ),
+          )
+        ],
       )
     );
   }
