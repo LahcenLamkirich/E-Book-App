@@ -14,11 +14,40 @@ class _BookHomeState extends State<BookHome> {
       body: Column(
         children: <Widget>[
           Container(
-            height: 280,
+            height: 200,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(bottomRight: Radius.circular(50)
               ),
-              color: Colors.purple
+              color: Color.fromRGBO(76, 115, 253,1),
+            ),
+            child: Stack(
+              children: <Widget>[
+                Positioned(
+                  top: 70,
+                  left: 0,
+                  child: Container(
+                    height: 80,
+                    width: 300,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(50),
+                        topRight: Radius.circular(50)
+                      ),
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 95,
+                  left: 20,
+                  child: Text("The Books",
+                    style: TextStyle(fontSize: 25,
+                      color: Color.fromRGBO(76, 115, 253,1),
+                      fontWeight:FontWeight.bold,
+                    ),
+                  ),
+                )
+              ],
             ),
           )
         ],
