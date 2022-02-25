@@ -62,7 +62,12 @@ class _BookHomeState extends State<BookHome> {
                 SizedBox(height: 20,),
                 Row(
                     children: <Widget>[
-                      Text("Here the image"),
+                      SizedBox(width: 10,),
+                      Image.asset(
+                        "assets/images/login.png",
+                        height: 120,
+                        width: 100,
+                      ),
                       SizedBox(width: 20,),
                       Column(
                         children: <Widget>[
