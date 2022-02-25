@@ -50,6 +50,7 @@ class _BookHomeState extends State<BookHome> {
             ),
           ),
           SizedBox(height: 20,),
+          Text("TEst"),
           Container(
             height: 150,
             width: 300,
@@ -71,8 +72,17 @@ class _BookHomeState extends State<BookHome> {
                       SizedBox(width: 20,),
                       Column(
                         children: <Widget>[
-                          Text("Name of the book"),
-                          Text("Subtitle of the book")
+                          Text("Name of the book",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),),
+                          SizedBox(height: 10,),
+                          Text("The name of the Author",
+                          style: TextStyle(
+                            fontSize: 15
+                          ),
+                          )
                         ],
                       )
                     ],
