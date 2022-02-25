@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BookHome extends StatefulWidget {
@@ -51,6 +52,7 @@ class _BookHomeState extends State<BookHome> {
           ),
           SizedBox(height: 20,),
           SingleChildScrollView(
+            padding: EdgeInsets.symmetric(horizontal: 10),
             scrollDirection: Axis.horizontal,
             child: Row(
               children: <Widget>[
@@ -176,6 +178,16 @@ class _BookHomeState extends State<BookHome> {
 
               ],
             ),
+          ),
+          SizedBox(height: 10,),
+          Text("Categories",
+            style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.red ,
+                decoration: TextDecoration.underline
+            ),
+            
           )
         ],
       ),
