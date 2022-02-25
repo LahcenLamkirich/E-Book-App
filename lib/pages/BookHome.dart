@@ -161,7 +161,8 @@ class _BookHomeState extends State<BookHome> {
                                 style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
-                                ),),
+                                ),
+                              ),
                               SizedBox(height: 10,),
                               Text("The name of the Author",
                                 style: TextStyle(
@@ -187,7 +188,7 @@ class _BookHomeState extends State<BookHome> {
                 color: Colors.red ,
                 decoration: TextDecoration.underline
             ),
-            
+
           )
         ],
       ),
