@@ -50,43 +50,129 @@ class _BookHomeState extends State<BookHome> {
             ),
           ),
           SizedBox(height: 20,),
-          Text("TEst"),
-          Container(
-            height: 150,
-            width: 300,
-            decoration: BoxDecoration(
-              color: Colors.grey.withOpacity(0.2),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Column(
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
               children: <Widget>[
-                SizedBox(height: 20,),
-                Row(
+                Container(
+                  height: 150,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
                     children: <Widget>[
-                      SizedBox(width: 10,),
-                      Image.asset(
-                        "assets/images/login.png",
-                        height: 120,
-                        width: 100,
-                      ),
-                      SizedBox(width: 20,),
-                      Column(
+                      SizedBox(height: 20,),
+                      Row(
+                          children: <Widget>[
+                            SizedBox(width: 10,),
+                            Image.asset(
+                              "assets/images/login.png",
+                              height: 120,
+                              width: 100,
+                            ),
+                            SizedBox(width: 20,),
+                            Column(
+                              children: <Widget>[
+                                Text("Name of the book",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),),
+                                SizedBox(height: 10,),
+                                Text("The name of the Author",
+                                style: TextStyle(
+                                  fontSize: 15
+                                ),
+                                )
+                              ],
+                            )
+                          ],
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(width: 10,),
+                Container(
+                  height: 150,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(height: 20,),
+                      Row(
                         children: <Widget>[
-                          Text("Name of the book",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),),
-                          SizedBox(height: 10,),
-                          Text("The name of the Author",
-                          style: TextStyle(
-                            fontSize: 15
+                          SizedBox(width: 10,),
+                          Image.asset(
+                            "assets/images/login.png",
+                            height: 120,
+                            width: 100,
                           ),
+                          SizedBox(width: 20,),
+                          Column(
+                            children: <Widget>[
+                              Text("Name of the book",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),),
+                              SizedBox(height: 10,),
+                              Text("The name of the Author",
+                                style: TextStyle(
+                                    fontSize: 15
+                                ),
+                              )
+                            ],
                           )
                         ],
                       )
                     ],
-                )
+                  ),
+                ),
+                SizedBox(width: 10,),
+                Container(
+                  height: 150,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(height: 20,),
+                      Row(
+                        children: <Widget>[
+                          SizedBox(width: 10,),
+                          Image.asset(
+                            "assets/images/login.png",
+                            height: 120,
+                            width: 100,
+                          ),
+                          SizedBox(width: 20,),
+                          Column(
+                            children: <Widget>[
+                              Text("Name of the book",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),),
+                              SizedBox(height: 10,),
+                              Text("The name of the Author",
+                                style: TextStyle(
+                                    fontSize: 15
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
 
               ],
             ),
