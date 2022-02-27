@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/HomePage.dart';
 import 'package:flutterapp/register.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
