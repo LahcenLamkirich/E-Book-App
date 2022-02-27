@@ -18,7 +18,8 @@ class _HomePageState extends State<HomePage> {
 //  ];
   final _pageOptions = [
       BookHome(),
-
+      //anotherWidget Here (Seconde_)
+      //anotherWidget Here (Third)
   ];
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,6 @@ class _HomePageState extends State<HomePage> {
             });
         },
         currentIndex: Selected_item
-
       ),
     );
   }
