@@ -15,10 +15,10 @@ class AuthService {
         }
     }
 
-    // sing in email and password
+    // sing in Email and Password
     Future SingInEmailAndPassword(String email, String password) async {
           try{
-            AuthResult result = _firebaseAuth.signInWithEmailAndPassword(email: email, password: password) as AuthResult;
+            AuthResult result = await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
           }catch(e){
             print(e.toString());
           }

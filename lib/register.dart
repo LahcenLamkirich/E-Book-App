@@ -11,6 +11,8 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
 
   final AuthService _auth = AuthService();
+  final _formKey = GlobalKey<FormState>();
+  final _formKey1 = GlobalKey<FormState>();
   String email = "";
   String password = "";
   String confirmPassword = "";
@@ -56,7 +58,9 @@ class _RegisterState extends State<Register> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 alignment: Alignment.center,
                 child: Form(
+                  key: _formKey,
                   child: TextFormField(
+                    validator: (val) => val.isEmpty ? 'Enter The Email' : null,
                     onChanged: (val){
                       setState(() {
                           email = val ;
@@ -82,7 +86,9 @@ class _RegisterState extends State<Register> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 alignment: Alignment.center,
                 child: Form(
+                  key: _formKey1,
                   child: TextFormField(
+                    validator: (val) => val.length < 6 ? "Enter Password with 6 chiffres min !" : null,
                     onChanged: (val){
                       setState(() {
                         password = val ;
@@ -141,8 +147,11 @@ class _RegisterState extends State<Register> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(40),
                       ),
-                      onPressed: () {
-                        print("Email: " + email + " Password : " + password + " Confirm Password : " + confirmPassword);
+                      onPressed: () async {
+                        if(_formKey.currentState.validate()){
+                          print(email);
+                          print(password);
+                        }
                       },
                       padding: EdgeInsets.symmetric(vertical: 18, horizontal: 35, ),
                       color: Color.fromRGBO(76, 115, 253,1),
