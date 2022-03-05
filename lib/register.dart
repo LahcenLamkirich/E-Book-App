@@ -9,7 +9,12 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+
   final AuthService _auth = AuthService();
+  String email = "";
+  String password = "";
+  String confirmPassword = "";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +57,11 @@ class _RegisterState extends State<Register> {
                 alignment: Alignment.center,
                 child: Form(
                   child: TextFormField(
+                    onChanged: (val){
+                      setState(() {
+                          email = val ;
+                      });
+                    },
                     maxLength: 50,
                     decoration: InputDecoration(
                         hintText: "Email",
@@ -73,6 +83,11 @@ class _RegisterState extends State<Register> {
                 alignment: Alignment.center,
                 child: Form(
                   child: TextFormField(
+                    onChanged: (val){
+                      setState(() {
+                        password = val ;
+                      });
+                    },
                     maxLength: 50,
                     decoration: InputDecoration(
                         hintText: "Password",
@@ -94,6 +109,11 @@ class _RegisterState extends State<Register> {
                 alignment: Alignment.center,
                 child: Form(
                   child: TextFormField(
+                    onChanged: (val){
+                      setState(() {
+                        confirmPassword = val ;
+                      });
+                    },
                     maxLength: 50,
                     decoration: InputDecoration(
                         hintText: "Confirm Password",
@@ -121,7 +141,9 @@ class _RegisterState extends State<Register> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(40),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        print("Email: " + email + " Password : " + password + " Confirm Password : " + confirmPassword);
+                      },
                       padding: EdgeInsets.symmetric(vertical: 18, horizontal: 35, ),
                       color: Color.fromRGBO(76, 115, 253,1),
                       textColor: Colors.white,
