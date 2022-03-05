@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapp/services/auth.dart';
 
 
 class Register extends StatefulWidget {
@@ -8,6 +9,7 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,27 +26,27 @@ class _RegisterState extends State<Register> {
                   Image.asset('assets/images/login.png', width: 200, height: 260,),
                 ],
               ),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                alignment: Alignment.center,
-                child: Form(
-                  child: TextFormField(
-                    maxLength: 50,
-                    decoration: InputDecoration(
-                      hintText: "Username",
-                      labelText: "Username",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(40),
-                        borderSide: BorderSide(color: Colors.grey)
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius:BorderRadius.circular(40),
-                        borderSide: BorderSide(color: Colors.blue),
-                      )
-                    ),
-                  ),
-                ),
-              ),
+//              Container(
+//                padding: EdgeInsets.symmetric(horizontal: 10),
+//                alignment: Alignment.center,
+//                child: Form(
+//                  child: TextFormField(
+//                    maxLength: 50,
+//                    decoration: InputDecoration(
+//                      hintText: "Username",
+//                      labelText: "Username",
+//                      border: OutlineInputBorder(
+//                        borderRadius: BorderRadius.circular(40),
+//                        borderSide: BorderSide(color: Colors.grey)
+//                      ),
+//                      focusedBorder: OutlineInputBorder(
+//                        borderRadius:BorderRadius.circular(40),
+//                        borderSide: BorderSide(color: Colors.blue),
+//                      )
+//                    ),
+//                  ),
+//                ),
+//              ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 alignment: Alignment.center,

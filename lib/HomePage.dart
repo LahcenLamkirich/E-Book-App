@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/pages/BookHome.dart';
-import './pages/BookHome.dart';
+import 'package:flutterapp/pages/Home/BookHome.dart';
+import 'pages/Home/BookHome.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();

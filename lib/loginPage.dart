@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/HomePage.dart';
 import 'package:flutterapp/register.dart';
-import 'package:firebase_core/firebase_core.dart';
-
+import 'package:flutterapp/services/auth.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -11,6 +10,10 @@ _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  final AuthService _auth = AuthService();
+  String email = "";
+  String password = "";
 
   @override
   Widget build(BuildContext context) {
@@ -37,10 +40,15 @@ class _LoginPageState extends State<LoginPage> {
                 alignment: Alignment.center,
                 child: Form(
                   child: TextFormField(
+                    onChanged: (val) {
+                      setState(() {
+                        email = val ;
+                      });
+                    },
                     decoration: InputDecoration(
-                      hintText: "Username",
+                      hintText: "Email",
                       hintStyle: TextStyle(color: Colors.grey),
-                      labelText: "Username",
+                      labelText: "Email",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(50),
                         borderSide: BorderSide(color: Colors.red),
@@ -59,6 +67,9 @@ class _LoginPageState extends State<LoginPage> {
                 width: MediaQuery.of(context).size.width,
                 child: Form(
                   child: TextFormField(
+                    onChanged: (val){
+                      password = val;
+                    },
                     obscureText: true,
                     decoration: InputDecoration(
                       hintText: "Passowrd",
@@ -91,7 +102,8 @@ class _LoginPageState extends State<LoginPage> {
                       textColor: Colors.white,
                       child: GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                          print("Email : " + email + " Password : " + password) ;
+//                          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
                         },
                         child: Text("Sign In",
                             style: TextStyle(fontSize: 16)),
