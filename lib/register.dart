@@ -13,9 +13,11 @@ class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   final _formKey1 = GlobalKey<FormState>();
+  final _formKey2 = GlobalKey<FormState>();
   String email = "";
   String password = "";
   String confirmPassword = "";
+  String Error = "";
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +90,8 @@ class _RegisterState extends State<Register> {
                 child: Form(
                   key: _formKey1,
                   child: TextFormField(
-                    validator: (val) => val.length < 6 ? "Enter Password with 6 chiffres min !" : null,
+                    obscureText: true,
+                    validator: (val) => val.length < 6 ? "Password must be more than 6" : null,
                     onChanged: (val){
                       setState(() {
                         password = val ;
@@ -114,7 +117,10 @@ class _RegisterState extends State<Register> {
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 alignment: Alignment.center,
                 child: Form(
+                  key: _formKey2,
                   child: TextFormField(
+                    obscureText: true,
+                    validator: (val) => val.length < 6 ? "Password must be more than 6" : null,
                     onChanged: (val){
                       setState(() {
                         confirmPassword = val ;
@@ -148,9 +154,15 @@ class _RegisterState extends State<Register> {
                         borderRadius: BorderRadius.circular(40),
                       ),
                       onPressed: () async {
-                        if(_formKey.currentState.validate()){
-                          print(email);
-                          print(password);
+                        if(_formKey.currentState.validate() && _formKey1.currentState.validate() && _formKey2.currentState.validate()){
+                            dynamic result = await _auth.registerWithEmailAndPassword(email, password);
+                            if(result == null){
+                                setState(() {
+                                  Error = 'Please Enter valide Data' ;
+                                });
+                            }else {
+                              print("Registered Succesfully");
+                            }
                         }
                       },
                       padding: EdgeInsets.symmetric(vertical: 18, horizontal: 35, ),
@@ -160,6 +172,7 @@ class _RegisterState extends State<Register> {
                           style: TextStyle(fontSize: 16)),
                     ),
                   ),
+
                   SizedBox(width: 15,),
                   Container(
                     child: CustomPaint(
@@ -186,6 +199,13 @@ class _RegisterState extends State<Register> {
                     fontWeight: FontWeight.bold
                 ),),
               ),
+              Text(
+                Error,
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 25,
+                ),
+              )
             ],
           ),
         ),
